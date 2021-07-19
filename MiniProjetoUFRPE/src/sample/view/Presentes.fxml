@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.PresentesController">
+   <children>
+      <TabPane prefHeight="500.0" prefWidth="670.0">
+         <tabs>
+            <Tab text="Cadastro de Presentes">
+               <content>
+                  <AnchorPane prefHeight="400.0" prefWidth="600.0">
+                     <children>
+                        <Label layoutX="223.0" layoutY="124.0" text="Categoria:" />
+                        <Label layoutX="223.0" layoutY="172.0" text="Descrição:" />
+                        <Label layoutX="244.0" layoutY="215.0" text="Preço:" />
+                        <TextField fx:id="txtCategoria" layoutX="299.0" layoutY="120.0" />
+                        <TextField fx:id="txtDescricao" layoutX="299.0" layoutY="168.0" />
+                        <TextField fx:id="txtPreco" layoutX="299.0" layoutY="211.0" />
+                        <Button layoutX="335.0" layoutY="261.0" mnemonicParsing="false" onAction="#limpar" text="Limpar" />
+                        <Button layoutX="400.0" layoutY="261.0" mnemonicParsing="false" onAction="#salvar" text="Salvar" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

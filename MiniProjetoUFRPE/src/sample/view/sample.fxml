@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Controller">
+   <center>
+      <AnchorPane fx:id="contentPane" prefHeight="500.0" prefWidth="670.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="8.0" maxWidth="1.7976931348623157E308" prefHeight="488.0" prefWidth="643.0" text="Bem-vindo ao sistema de amigo secreto " textAlignment="CENTER" textFill="#e85353">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+   </center>
+   <left>
+      <VBox prefHeight="500.0" prefWidth="130.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnPessoas" layoutY="50.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#openMenuPessoas" prefHeight="40.0" text="Pessoas" />
+            <Button fx:id="btnGrupos" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#openMenuGrupos" prefHeight="40.0" text="Grupos" />
+            <Button fx:id="btnPresentes" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#openMenuPresentes" prefHeight="40.0" text="Presentes" />
+            <Button fx:id="btnSorteio" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#openMenuSorteio" prefHeight="40.0" text="Sorteio" />
+         </children>
+      </VBox>
+   </left>
+</BorderPane>

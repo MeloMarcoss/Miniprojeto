@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.PessoasController">
+   <children>
+      <TabPane prefHeight="500.0" prefWidth="670.0">
+         <tabs>
+            <Tab text="Cadastro de Pessoas">
+               <content>
+                  <AnchorPane prefHeight="400.0" prefWidth="600.0">
+                     <children>
+                        <Label layoutX="132.0" layoutY="118.0" text="Nome Completo:" />
+                        <Label layoutX="178.0" layoutY="162.0" text="Apelido:" />
+                        <Label layoutX="188.0" layoutY="206.0" text="Senha:" />
+                        <Label layoutX="133.0" layoutY="249.0" text="Confirmar Senha:" />
+                        <TextField fx:id="txtNome" layoutX="239.0" layoutY="114.0" prefHeight="25.0" prefWidth="300.0" />
+                        <TextField fx:id="txtApelido" layoutX="239.0" layoutY="158.0" prefWidth="300.0" />
+                        <PasswordField fx:id="txtSenha" layoutX="239.0" layoutY="202.0" prefHeight="25.0" prefWidth="300.0" />
+                        <PasswordField fx:id="txtConfSenha" layoutX="239.0" layoutY="245.0" prefHeight="25.0" prefWidth="300.0" />
+                        <Button fx:id="btnLimpar" layoutX="426.0" layoutY="283.0" mnemonicParsing="false" onAction="#limpar" text="Limpar" />
+                        <Button fx:id="btnSalvar" layoutX="491.0" layoutY="283.0" mnemonicParsing="false" onAction="#salvar" text="Salvar" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Presentes da Pessoa">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="230.0" layoutY="104.0" text="Pessoa:" />
+                        <Label layoutX="130.0" layoutY="183.0" text="Todos os presentes" />
+                        <ListView fx:id="listaTodosOsPresentes" layoutX="130.0" layoutY="200.0" prefHeight="200.0" prefWidth="200.0" />
+                        <ListView fx:id="listaPresentesDaPessoa" layoutX="380.0" layoutY="200.0" prefHeight="200.0" prefWidth="200.0" />
+                        <Button layoutX="330.0" layoutY="249.0" mnemonicParsing="false" onAction="#adicionarPresente" prefWidth="50.0" text="Add" />
+                        <Button layoutX="330.0" layoutY="300.0" mnemonicParsing="false" onAction="#removerPresente" prefWidth="50.0" text="Del" />
+                        <ComboBox fx:id="comboBox" layoutX="285.0" layoutY="100.0" onAction="#selecionarComboBox" prefWidth="150.0" />
+                        <Label fx:id="nomePessoa" layoutX="380.0" layoutY="183.0" text="Pessoa" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

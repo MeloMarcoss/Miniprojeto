@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.SorteioController">
+   <children>
+      <TabPane prefHeight="500.0" prefWidth="670.0">
+         <tabs>
+            <Tab text="Realização de Sorteio">
+               <content>
+                  <AnchorPane prefHeight="400.0" prefWidth="600.0">
+                     <children>
+                        <Label layoutX="235.0" layoutY="124.0" text="Grupo:" />
+                        <ComboBox fx:id="comboBox" layoutX="285.0" layoutY="120.0" prefWidth="150.0" />
+                        <Button layoutX="272.0" layoutY="179.0" mnemonicParsing="false" onAction="#sortear" style="-fx-padding: 20px;" text="Realizar Sorteio!" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Consulta de Amigo Secreto">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="253.0" layoutY="92.0" text="Grupo:" />
+                        <ComboBox fx:id="comboBoxGrupo" layoutX="307.0" layoutY="88.0" prefWidth="150.0" />
+                        <Label layoutX="252.0" layoutY="129.0" text="Pessoa:" />
+                        <ComboBox fx:id="comboBoxPessoa" layoutX="307.0" layoutY="125.0" prefWidth="150.0" />
+                        <Label layoutX="213.0" layoutY="181.0" text="Senha Pessoal:" />
+                        <PasswordField fx:id="txtSenha" layoutX="308.0" layoutY="177.0" />
+                        <Button layoutX="304.0" layoutY="230.0" mnemonicParsing="false" onAction="#consultar" prefHeight="25.0" prefWidth="154.0" text="Consultar Amigo Secreto" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

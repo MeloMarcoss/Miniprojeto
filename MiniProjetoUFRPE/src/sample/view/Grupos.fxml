@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.GruposController">
+   <children>
+      <TabPane prefHeight="500.0" prefWidth="670.0">
+         <tabs>
+            <Tab text="Cadastro de Grupos">
+               <content>
+                  <AnchorPane prefHeight="400.0" prefWidth="600.0">
+                     <children>
+                        <Label layoutX="184.0" layoutY="140.0" text="Nome:" />
+                        <Label layoutX="141.0" layoutY="187.0" text="Dia do Sorteio:" />
+                        <TextField fx:id="txtNomeGrupo" layoutX="227.0" layoutY="136.0" prefWidth="300.0" />
+                        <DatePicker fx:id="datePicker" layoutX="229.0" layoutY="183.0" prefWidth="300.0" />
+                        <Button layoutX="481.0" layoutY="236.0" mnemonicParsing="false" onAction="#salvar" text="Salvar" />
+                        <Button layoutX="412.0" layoutY="236.0" mnemonicParsing="false" onAction="#limpar" text="Limpar" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Pessoas em Grupos">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="239.0" layoutY="90.0" text="Grupo:" />
+                        <Label layoutX="110.0" layoutY="168.0" text="Todas as Pessoas:" />
+                        <Label layoutX="361.0" layoutY="168.0" text="Pessoas no Grupo:" />
+                        <ListView fx:id="listaTodasAsPessoas" layoutX="110.0" layoutY="186.0" prefHeight="200.0" prefWidth="200.0" />
+                        <ListView fx:id="listaPessoasNoGrupo" layoutX="361.0" layoutY="186.0" prefHeight="200.0" prefWidth="200.0" />
+                        <Button layoutX="310.0" layoutY="235.0" mnemonicParsing="false" onAction="#adicionar" prefWidth="50.0" text="Add" />
+                        <Button layoutX="310.0" layoutY="274.0" mnemonicParsing="false" onAction="#remover" prefWidth="50.0" text="Del" />
+                        <ComboBox fx:id="comboBox" layoutX="282.0" layoutY="86.0" onAction="#selecionarComboBox" prefWidth="150.0" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
